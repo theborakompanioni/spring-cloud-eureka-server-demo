@@ -1,0 +1,11 @@
+spring.application.name: 'spring-cloud-eureka-server-demo'
+spring.profiles.active: test
+
+app.name: spring-cloud-eureka-server-demo (test)
+app.description: a spring-cloud + eureka demo app
+
+eureka.client.register-with-eureka: false
+eureka.client.fetch-registry: false
+
+endpoints.jmx.domain: spring-cloud-zuul-gateway-demo
+endpoints.jmx.unique-names: true

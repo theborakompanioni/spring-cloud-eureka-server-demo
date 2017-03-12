@@ -1,0 +1,36 @@
+spring.application.name: 'spring-cloud-eureka-server-demo'
+spring.profiles.active: production
+
+app.name: spring-cloud-eureka-server-demo
+app.description: a spring-cloud + eureka demo app
+
+server.port: 8761
+server.use-forward-headers: true
+server.compression.enabled: true
+
+eureka:
+  environment: production
+  datacenter: production-datacenter
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+endpoints.jmx.domain: spring-cloud-eureka-server-demo
+endpoints.jmx.unique-names: true
+
+management.port: 9761
+management.context-path: /
+
+#spring.boot.admin.url: http://localhost:9080
+
+# LOGGING
+logging.path: ./var/log
+logging.file: application.log
+logging.config: classpath:logback.xml
+logging.level.org.springframework: INFO
+logging.level.com.netflix.eureka: INFO #OFF
+logging.level.com.netflix.discovery: OFF
