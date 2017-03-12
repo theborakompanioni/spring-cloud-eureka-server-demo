@@ -9,7 +9,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.system.ApplicationPidFileWriter;
 import org.springframework.boot.system.EmbeddedServerPortFileWriter;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +18,6 @@ import org.tbk.sceurekademo.config.ApplicationProperties;
 import java.util.Arrays;
 
 @EnableEurekaServer
-@EnableHystrixDashboard
 @SpringBootApplication
 @EnableConfigurationProperties(ApplicationProperties.class)
 public class Application {
